@@ -1,17 +1,23 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Blog from "./components/Blog/Blog";
-import Blogs from "./containers/blogs";
-
+import * as LazyLoading from "./LazyLoading.js";
+import { Suspense } from "react";
+import { Router, Switch } from "react-router-dom";
+import history from "./history";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes> 
-          <Route path="/" element={<Blogs />} />
-          <Route path="/:id" element={<Blog />} />
-        </Routes>
-      </BrowserRouter>
+      <Router history={history}>
+        <Suspense fallback={"loading..."}>
+          <Router history={history}>
+            <Switch>
+              {/* <Routes>  */}
+              <LazyLoading.Blogs path="/blogs"  exact/>
+              {/* <LazyLoading.Blog path="/blogs/:id"  exact/> */}
+              {/* </Routes> */}
+            </Switch>
+          </Router>
+        </Suspense>
+      </Router>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 {
+  "port": 3008,
   "buildDirectory": "./build",
   "engine": {
     "launchOptions": {
@@ -12,7 +13,7 @@
     }
   },
   "routes": [
-    "/",
-    "/:id"
+    "/blogs",
+    "/blogs/:id"
   ]
 }

@@ -18,7 +18,7 @@ function Blogs() {
       {blogs?.map((blog) => {
         return (
           <div key={blog?.id} className="blog-container">
-            <Link to={`/${blog?.id}`}>
+            <Link to={`/blogs/${blog?.id}`}>
               <h2>{blog?.title}</h2>
               <p>{blog?.body}</p>
             </Link>
