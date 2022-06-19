@@ -11,8 +11,9 @@ function App() {
           <Router history={history}>
             <Switch>
               {/* <Routes>  */}
+              <LazyLoading.Home path="/"  exact/>
               <LazyLoading.Blogs path="/blogs"  exact/>
-              {/* <LazyLoading.Blog path="/blogs/:id"  exact/> */}
+              <LazyLoading.Blog path="/blogs/:id"  exact/>
               {/* </Routes> */}
             </Switch>
           </Router>
