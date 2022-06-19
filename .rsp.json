@@ -1,0 +1,13 @@
+{
+  "port": 3006,
+  "buildDirectory": "./build",
+  "engine": {
+    "launchOptions": {
+      "ignoreHTTPSErrors": true
+    },
+    "gotoOptions": {
+      "timeout": 0
+    }
+  },
+  "routes": ["/", "/:id"]
+}
