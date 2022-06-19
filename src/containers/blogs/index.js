@@ -9,7 +9,6 @@ function Blogs() {
       .then((res) => res.json())
       .then((res) => setBlogs(res));
   }, []);
-  console.log(blogs);
   return (
     <div className="App">
       <Helmet>
